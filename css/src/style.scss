@@ -6,6 +6,8 @@ $color5: #000;
 $color6: #ccc;
 $font1: 'montserrat-bold', Tahoma, sans-serif;
 $font2: 'roboto-light', Tahoma, sans-serif;
+$fontNames: montserrat-bold, roboto-light;
+
 
 
 
@@ -121,7 +123,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		&--works{
 			padding: 4px 14px;
 			letter-spacing: 2px;
-			margin: 53px 0px 0px 21px;
+			margin: 54px 0px 0px 21px;
 			font-size: 10px;
 		}
 		&--works2nd{
@@ -162,6 +164,13 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	padding: 0;
 	margin: 0 auto;
 	width: 300px;
+	display: none;
+	&--small{
+		display: inline-block;
+	}
+	&--big{
+		display: none;
+	}
 	&__elem{
 		margin: 0px 0px 11px 0px;
 	}
@@ -174,11 +183,11 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		vertical-align: middle;
 	}
 	&__link{
+		display: table;
 		width: 300px;
 		height: 119px;
 		background: url('../../img/src/ideas_sprite.png');
 		// display: inline-block;
-		display: table;
 		text-decoration: none;
 		border-radius: 4px;
 		&--sport{
@@ -209,7 +218,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	font-family: $font1;
 	font-size: 22px;
 	color: $color5;
-	margin: 0 auto 10px;
+	margin: 0 auto 13px;
 	width: 276px;
 	text-align: center;
 	&--works{
@@ -221,6 +230,12 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		color: $color1;
 		margin: 15px 0 0px 20px;
 		text-align: left;
+	}
+	&--ideas{
+		margin: 0 auto 13px;
+	}
+	&--search{
+		margin: 0 auto 9px;
 	}
 }
 .list{
@@ -266,6 +281,9 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		color: $color4;
 		line-height: 18px;
 		margin: 12px auto 0;
+	}
+	&--left{
+		margin: 0px 0px 0px 1px;
 	}
 }
 
@@ -348,7 +366,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 
 .search{
 	width: 320px;
-	margin: 41px 0 0 -2px;
+	margin: 22px 0 0 -2px;
 	text-align: center;
 	&__head2{
 		font-family: $font2;
@@ -472,7 +490,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 			margin: 15px 0 0px 18px;
 		}
 		&--works{
-			margin: 94px 0px 34px 212px;
+			margin: 94px 0px 34px 210px;
 		}
 	}
 	.promo{
@@ -501,7 +519,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		&--works{
 			font-size: 14px;
 			width: 206px;
-			margin: 9px 0px 0px 20px;
+			margin: 10px 0 0 18px;
 		}
 	}
 	
@@ -547,6 +565,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	.click__link{
 		&--promo{
 			padding: 11px 24px;
+			margin: 0px 2px 0px 0px;
 		}
 		&--other{
 			margin: 2px 0 0;
@@ -560,6 +579,9 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		}
 		&--works3rd{
 			margin: 196px 0px 0px 21px;
+		}
+		&--partners{
+			margin: 34px 0 0;
 		}
 	}
 
@@ -581,6 +603,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		margin: 0px 0px 32px;
 		&--left{
 			float: left;
+			margin: 0;
 		}
 		&--right{
 			float: right;
@@ -648,6 +671,13 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	}
 	.acts{
 		width: 768px;
+		&--small{
+			display: none;
+		}
+		&--big{
+			display: inline-block;
+			margin: 10px auto 0px;
+		}
 		&__elem{
 			display: inline-block;
 			margin: 10px;
@@ -778,10 +808,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 			background-position: -2px -4px;
 			
 		}
-	}
-
-
-	
+	}	
 }
 
 
@@ -918,6 +945,7 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	}
 	
 
+
 	
 
 	.partners{
@@ -942,6 +970,10 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 		}
 		&--left{
 			float: left;
+			margin: 0;
+		}
+		&--right{
+			margin-bottom: 0;
 		}
 	}
 
@@ -953,6 +985,12 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 	}
 	.acts{
 		width: 960px;
+		&--small{
+			display: none;
+		}
+		&--big{
+			display: inline-block;
+		}
 		&__elem{
 			margin: 10px;	
 		}
@@ -1131,8 +1169,6 @@ $font2: 'roboto-light', Tahoma, sans-serif;
 
 
 
-// $fontNames: montserrat-bold, montserrat-regular, roboto-black, roboto-blackitalic, roboto-bold, roboto-bolditalic, roboto-italic, roboto-light, roboto-lightitalic, roboto-medium, roboto-mediumitalic, roboto-regular, roboto-thin, roboto-thinitalic;
-$fontNames: montserrat-bold, roboto-light;
 @each $name in $fontNames {
 	@font-face{
 		font-family: '#{$name}';
@@ -1145,7 +1181,3 @@ $fontNames: montserrat-bold, roboto-light;
 		font-style: normal;
 	}
 }
-
-
-
-

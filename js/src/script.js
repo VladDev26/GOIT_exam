@@ -58,11 +58,20 @@
 			// console.log(urls);
 			
 			for(var j=0; j<urls.length; j++){
-				$('.acts__link').eq(j).css({
+				$('.acts__link', '.acts--big').eq(j).css({
 					// 'width': data.hits[j].webformatWidth/2,
 					// 'height': data.hits[j].webformatHeight/2,
 					'height': data.hits[j].webformatHeight,
 					'background': 'url("'+ urls[j] +'")',
+					'background-repeat': 'no-repeat',
+					'background-size': 'cover',
+					// 'background-size': '100% 100%',
+					'background-position': 'center'
+				});
+			}
+			for(var k=0; k<urls.length; k++){
+				$('.acts__link', '.acts--small').eq(k).css({
+					'background': 'url("'+ urls[k] +'")',
 					'background-repeat': 'no-repeat',
 					'background-size': 'cover',
 					'background-position': 'center'
