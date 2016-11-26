@@ -8,9 +8,7 @@ var gulp = require('gulp'),
 	cssmin = require('gulp-minify-css');
 
 gulp.task('connect', function() {
-	connect.server({
-		https: true
-	});
+	connect.server({ https: true });
 });
 
 gulp.task('sass', function () {
@@ -18,9 +16,17 @@ gulp.task('sass', function () {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('css/src'));
 });
- 
-gulp.task('sass:watch', function () {
-	gulp.watch('css/src/style.scss', ['sass']);
+
+gulp.task('watch', function () {
+	gulp.watch('css/src/style.scss', ['sass', 'style:build']);
+	gulp.watch('js/src/script.js', ['js:build']);
+});
+
+gulp.task('style:build', function() {
+	gulp.src('css/src/main.css')
+		.pipe(rigger())
+		.pipe(cssmin())
+		.pipe(gulp.dest('css/build'));
 });
 
 gulp.task('js:build', function() {
@@ -37,11 +43,7 @@ gulp.task('js:build-ie8', function() {
 		.pipe(gulp.dest('js/build'));
 });
 
-gulp.task('style:build', function() {
-	gulp.src('css/src/main.css')
-		.pipe(rigger())
-		.pipe(cssmin())
-		.pipe(gulp.dest('css/build'));
-});
 
-gulp.task('default', ['sass:watch']);
+
+
+gulp.task('default', ['connect', 'watch']);
